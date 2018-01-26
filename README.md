@@ -9,7 +9,7 @@ Supports the latest browser versions of Chrome, FireFox, MS Edge, and Mobile Saf
 # To get it up and running, intall Go Language. 
 Once done, enter in the command line:
 
-go run httpServer.go 
+go run server.go 
 
 Then navigate to 127.0.0.1:8080 
 
