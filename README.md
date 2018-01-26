@@ -6,8 +6,10 @@ Requires https. In development use 127.0.0.1. Localhost will not work and will t
 
 Supports the latest browser versions of Chrome, FireFox, MS Edge, and Mobile Safari.
 
-# To get it up and running, intall Go Language. 
-Once done, enter in the command line:
+# To get it up and running, install Go Language. 
+https://golang.org/dl/
+
+Once installed, clone the project to your directory and find the server.gg file and enter in the command line:
 
 go run server.go 
 
@@ -20,7 +22,9 @@ Refresh the page and you should still see a web page!
 
 To verify, try this on other websites within chrome dev tools and more often than not on older websites, you will recieve the offline message. 
 
-# IF: Address in use binding error.
+# Address in use binding error.
+In testing, the port can stay in use sometimes and you may need to kill the process by id to use the same port.
+
 In terminal, find the Process ID and kill it. 
 
 lsof -i tcp:8080 
