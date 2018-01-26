@@ -1,0 +1,8 @@
+{
+  "name": "GoLang Progressive Web Application",
+  "short_name": "GoLang Progressive",
+  "start_url": "/?sw=1",
+  "theme_color": "#000000",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen"
+}
