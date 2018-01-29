@@ -62,19 +62,6 @@ window.addEventListener('beforeinstallprompt', function(e) {
     // success
     function geoSuccess(position) {
       console.log('Position updated.', position);
-
-      var latlon = position.coords.latitude + "," + position.coords.longitude;
-      if (cordinates !== latlon) {
-          cordinates = latlon;
-          var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+cordinates+"&zoom=14&size=400x300&sensor=false&key=AIzaSyBC1oBmfyXGtw1i3BdVvMY1u7-aB_AdDHs";
-          var x = document.getElementsByClassName("col-md-2");
-          var i;
-          for (i = 0; i < x.length; i++) {
-            x[i].innerHTML = "<img src='"+img_url+"'>";
-          }
-      }
-
-      
       if (target.latitude === position.coords.latitude 
       &&  target.longitude === position.coords.longitude) {
          console.warn('You reached the target.');
