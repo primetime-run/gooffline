@@ -1,4 +1,14 @@
-// beforeinstallprompt Event fired
+// app.js
+
+// add listeners for online and offline events
+window.addEventListener('online',  updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+function updateOnlineStatus(event) {
+  var condition = navigator.onLine ? 'online' : 'offline';
+  console.log("Network status: " + condition, event);
+}
+
+// beforeinstallprompt event fired
 window.addEventListener('beforeinstallprompt', function(e) {
   // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
   e.userChoice.then(function(choiceResult) {
@@ -37,15 +47,6 @@ window.addEventListener('beforeinstallprompt', function(e) {
 		// Microsoft Edge
 		// Go to about://flags and tick Enable service workers; restart browser.
 	  });
-	  
-    // add listeners for online and offline events
-    window.addEventListener('online',  updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
-    function updateOnlineStatus(event) {
-      var condition = navigator.onLine ? 'online' : 'offline';
-      console.log("Network status: " + condition);
-    }
-
   }
   
   // Request geo location data
